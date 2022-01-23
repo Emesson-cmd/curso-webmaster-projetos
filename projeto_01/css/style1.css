@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* a borda cresce para dentro */
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.center{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #212343;
+}
+
+header img {
+    margin: 14px 0;
+    height: 50px;
+}
+
+/* IMAGEM DA SEÇÃO 1 */
+
+.my-header {
+    width: 100%;
+    height: 557px;
+    background-image: url('../images/header_bg.png');
+}
+
+/* TEXTO DA SEÇÃO 1 */
+
+.mostrar-textos {
+    width: 600px;
+    height: 330px;
+    background-color: #212343;
+    opacity: 0.8;
+    float: left;
+    margin-top: 100px;
+}
+
+.mostrar-textos ul {
+    width: 80%;
+    margin: 0 auto;
+    list-style-position: inside;
+}
+
+.mostrar-textos li {
+    color: white;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+/* FORMULÁRIO DA SEÇÃO 1 */
+
+.formulario form{
+    width: 400px;
+    height: 587px;
+    background-color: white;
+    float: right;
+    position: relative;
+    top: -15px;
+    border: 15px solid #ccc;
+    background-clip: padding-box;
+    border-color: rgba(120,120,120,0.5);
+}
+
+fieldset{
+    border: 0;
+}
+
+fieldset h1 {
+    color: #ccc;
+    width: 90%;
+    margin: 20px auto;
+    margin-bottom: 50px;
+}
+
+fieldset label {
+    color: #ccc;
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+fieldset input {
+    margin-left: 5%;
+    width: 90%;
+    height: 50px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    color: #ccc;
+    font-weight: bold;
+}
+
+fieldset span {
+    margin-left: 5%;
+    color: #ccc;
+    font-size: 20px;
+}
+
+fieldset input[type="submit"]{
+    color: white;
+    background-color: #212343;
+    font-size: 25px;
+    margin-top: 20px;
+    border: 0;
+    cursor: pointer;
+}
+
+fieldset input[type="submit"]:hover{
+    background-color: black;
+}
+
+/* TEXTO DA SEÇÃO 2 */
+
+section.my-text{
+    width: 100%;
+    height: 330px;
+    background-color: #ddd;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.my-text  h1{
+    color: #212343;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.my-text p{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+/* ESTILO DA SEÇÃO DE DETALHES, EXEMPLOS, MAIS INFORMAÇÕES */
+
+section.detalhes{
+    width: 100%;
+    height: 700px;
+}
+
+/* ícone da flecha */
+
+.detalhes img{
+    display: block;
+    position: relative;
+    top: -32px;
+    margin: 0 auto;
+}
+
+/* exemplos */
+
+.detalhes h1{
+    color: #212343;
+    margin: 30px auto;
+    text-align: center  ;
+}
+
+.exemplos {
+    margin: 150px auto;
+    text-align: center;
+}
+
+.exemplos div {
+    display: inline-block;
+    max-width: 25%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.exemplos h3 {
+    margin: 30px 0;
+}
+
+/* CONSIDERAÇÕES FINAIS */
+
+.consideracoes{
+    border-top: 3px solid #212343;
+}
+
+section.consideracoes p {
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* MACETES */
+
+/*
+text-align: justify deixa todo o texto para a esquerda
+
+position relative, left 50%, margin-left menos a metade do width do elemento, centralizar ele
+Um macete para centralizar um elemento: escolha uma position onde podemos definir
+o "top, right, left e down" de um elemento. Ex.: postion: relative. Após isso, defina left: 50%.
+Dessa forma o elemento ficará quase no centro.
+Para ficar exatamente no centro, deve-se dá uma margin negativa da metade do elemento. 
+Se o elemento tem 100px de largura, o margin será -50px. Ex.: margin: -50px;
+elemento {
+    position: relative;
+    left: 50%
+    width: 100px
+    margin-left: -50px;
+}
+
+quando estamos trabalhando com float, o próximo elemento deve utilizar o cliear para nao cair
+dentro do float
+clear: both;
+sacada: utilizar um classe chamada clear
+div.clear
+.clear{
+    clear: both;
+}
+
+se você utilizar o float: left, os elemento não criaram uma margem extra. Mas se você utilizar
+display: inline-block, os elementos teram uma margem extra e consequentemente "cairam"
+elemento {
+    width: 33.3333%
+    display:inline-block; -> cria margem extra e cairá
+    float: left -> não cria margem extra e ficará na mesma linha
+}
+
+utilizar o display inline-block e os elementos não "cairem"
+elemento {
+    display: inline-block;
+    width:33.333%;
+    margni-right: -4px;
+}
+
+se ainda criar uma scroolbar com o matece acima. pegue o último elemento e dê a ele
+margem-right de 0
+elemento:last-child{
+    margin-right: 0;
+}
+
+criar uma classe center onde você pode definir uma largura fixa e centralizada. Dessa forma,
+quando você diminuir o zoom na página, os elementos sempre ficarão no centro.
+
+ faz com que os pontos da lista fiquem dentro do elemento (texto)
+ul{
+	list-style-position: inside; 
+}
+*/
