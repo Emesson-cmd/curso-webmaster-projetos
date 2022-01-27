@@ -9,22 +9,29 @@ html, body {
     font-family: 'Roboto Mono', monospace;
 }
 
+.clear{
+    clear: both;
+}
+
+/*
 .center{
     width: 1200px;
     margin: 0 auto;
     padding: 0 2%;
 }
+*/
 
 /* HEADER */
 
 header {
     width: 100%;
     height: 80px;
+    padding: 0 2%;
     background-color: #212343;
 }
 
 header img {
-    margin: 14px 0;
+    margin: 14px;
     height: 50px;
 }
 
@@ -34,17 +41,22 @@ header img {
     width: 100%;
     height: 557px;
     background-image: url('../images/header_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* TEXTO DA SEÇÃO 1 */
 
 .mostrar-textos {
-    width: 600px;
+    padding: 0 2%;
+    width: 480px;
     height: 330px;
     background-color: #212343;
     opacity: 0.8;
     float: left;
     margin-top: 100px;
+    margin-left: 100px;
 }
 
 .mostrar-textos ul {
@@ -62,12 +74,14 @@ header img {
 /* FORMULÁRIO DA SEÇÃO 1 */
 
 .formulario form{
+    padding: 0 2%;
     width: 400px;
     height: 587px;
     background-color: white;
     float: right;
     position: relative;
     top: -15px;
+    right: 100px;
     border: 15px solid #ccc;
     background-clip: padding-box;
     border-color: rgba(120,120,120,0.5);
@@ -140,6 +154,7 @@ section.my-text{
 
 .my-text p{
     width: 80%;
+    max-width: 768px;
     margin: 0 auto;
     margin-bottom: 100px;
 }
@@ -148,7 +163,7 @@ section.my-text{
 
 section.detalhes{
     width: 100%;
-    height: 700px;
+    height: auto;
 }
 
 /* ícone da flecha */
@@ -169,19 +184,23 @@ section.detalhes{
 }
 
 .exemplos {
-    margin: 150px auto;
+    margin: 100px auto;
     text-align: center;
 }
 
 .exemplos div {
-    display: inline-block;
-    max-width: 25%;
+    max-width: 33.3%;
+    float: left;
     margin: 0px auto;
     text-align: center;
 }
 
+.exemplos div p {
+    margin-bottom: 100px;
+}
+
 .exemplos h3 {
-    margin: 30px 0;
+    margin: 10px 0;
 }
 
 /* CONSIDERAÇÕES FINAIS */
@@ -193,6 +212,162 @@ section.detalhes{
 section.consideracoes p {
     margin: 20px auto;
     text-align: center;
+}
+
+@media screen and (max-width: 1102px) {
+
+    /* HEADER */
+    
+    header {
+        width: 100%;
+        height: auto;
+        background-color: #212343;
+        text-align: center;
+    }
+
+    header img {
+        margin: 5px;
+        height: 40px;
+    }
+
+    /* SEÇÃO 1 */
+
+    .my-header {
+        padding: 40px 2%;
+        width: 100%;
+        height: auto;
+        background-image: url('../images/header_bg.png');
+        text-align: center;
+    }
+
+    /* Lista de itens */
+
+    .mostrar-textos {
+        width: 40%;
+        max-width: 400px;
+        height: auto;
+        float: left;
+        margin-top: auto;
+        margin-left: auto;
+    }
+
+    .mostrar-textos ul {
+        margin: 20px auto;
+    }
+
+    /* formulário */
+
+    .formulario form{
+        max-width: 400px;
+        width: 60%;
+        height: 637px;
+        top: 0;
+        right: 0;
+        text-align: left;
+    }
+    
+    fieldset input[type="submit"]{
+        margin-top: 20px;
+    }
+
+    /* SEÇÃO 2 */   
+
+    section.my-text{
+        height: auto;
+        text-align: center;
+    } 
+    
+    .my-text p{
+        margin-bottom: 100px;
+        display: inline-block;
+        text-align: left;
+    }
+
+    /* ícone da flecha */
+
+    .detalhes img{
+        top: -27px;
+        width: 54px;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+
+    /* SEÇÃO 1 */
+
+    /* lista de textos */
+
+    .mostrar-textos{
+        margin-top: 0%;
+        float: none;
+        display: inline-block;
+        width: 100%;
+    }
+
+    /* Formulário */
+
+    .formulario form{
+        max-width: 400px;
+        width: 100%;
+        height: 637px;
+        display: inline-block;
+        float: none;
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    /* SEÇÃO 2 */
+
+    section.my-text{
+        height: auto;
+        text-align: center;
+    }
+    
+    .my-text p{
+        width: 90%;
+        max-width: 768px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        display: inline-block;
+        text-align: left;
+    }
+
+    /* ícone da flecha */
+
+    .detalhes img{
+        display: block;
+        position: relative;
+        top: -21px;
+        margin: 0 auto;
+        width: 42px;
+    }
+
+    /* SEÇÃO 3 */
+
+    section.detalhes{
+        height: auto;
+    }
+
+    .exemplos {
+        margin: 100px auto;
+        text-align: center;
+    }
+    
+    .exemplos div {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .exemplos img{
+        margin-top: 10px;
+    }
+    
+    .exemplos h3 {
+        margin: 10px 0;
+    }
+
 }
 
 /* MACETES */
